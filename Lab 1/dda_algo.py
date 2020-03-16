@@ -1,3 +1,4 @@
+# py -m pip install -U pygame --user
 import pygame, sys
 		# x = x + x_inc
 from pygame.locals import *
