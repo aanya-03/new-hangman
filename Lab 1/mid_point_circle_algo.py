@@ -4,7 +4,7 @@ from pygame import gfxdraw
 
 pygame.init()
 
-size = (500,700)
+size = (700,700)
 screen_surface = pygame.display.set_mode(size, 0, 32)
 pygame.display.set_caption("Mid-Point Circle Drawing Algorithm")
 
@@ -44,7 +44,8 @@ def mid_point_circle(radius, xc , yc):
 	# print("Center : {}".format(x, y))
 
 def plot_other_points(x,y,xc,yc):
-	gfxdraw.pixel(screen_surface,x + xc, -y+xc, BLACK)
+	gfxdraw.pixel(screen_surface, x+xc, y+yc, BLACK)
+	gfxdraw.pixel(screen_surface,x + xc, -y+yc, BLACK)
 	gfxdraw.pixel(screen_surface, -x + xc, y + yc, BLACK)
 	gfxdraw.pixel(screen_surface, -x + xc, -y + yc, BLACK)
 	gfxdraw.pixel(screen_surface, y + xc, x + yc, BLACK)
@@ -52,7 +53,7 @@ def plot_other_points(x,y,xc,yc):
 	gfxdraw.pixel(screen_surface, -y + xc, -x + yc, BLACK)
 	gfxdraw.pixel(screen_surface, -y + xc, x + yc, BLACK)
 
-mid_point_circle(100,200,200)
+mid_point_circle(100,200,300)
 
 
 pygame.display.flip()
